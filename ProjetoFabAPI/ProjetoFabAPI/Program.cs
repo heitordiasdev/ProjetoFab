@@ -1,6 +1,16 @@
+using Microsoft.EntityFrameworkCore;
+using ProjetoFabAPI.Data.Contexto;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+string strConnection = builder.Configuration.GetConnectionString("DefaultConnection");
+
+builder.Services.AddDbContext<DataContexto>(option =>
+{
+    option.UseNpgsql(strConnection);
+});
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

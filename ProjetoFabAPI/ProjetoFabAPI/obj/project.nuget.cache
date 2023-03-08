@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Da+BqeKZ1LU+OHz78NZTp8/fr1HA2guB5ze0xQYIDGQ0Raqn6KGvWTD/88rA1VzNlGGKWwjjzna4RNrHjSniaw==",
+  "dgSpecHash": "8IaMx2BkapaZHeKcffaQUS3wv4ubnGerI+QHKDja30fQo+S0lS2nni7C1F/XetlrpY6xlEbPsYMaJUxakG42yQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\heito\\Source\\Repos\\ProjetoFab\\ProjetoFabAPI\\ProjetoFabAPI\\ProjetoFabAPI.csproj",
+  "projectFilePath": "C:\\Users\\heito\\source\\repos\\ProjetoFab\\ProjetoFabAPI\\ProjetoFabAPI\\ProjetoFabAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\heito\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\heito\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.3\\microsoft.entityframeworkcore.7.0.3.nupkg.sha512",
