@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "2HdsBgNRkE2743oghcqZ32z1vvCdBTMkHbgLQMQt6X3h+rZUxW/Ood7IgtBRES0UZ0SsLA0qTX0MeFeOR51KjA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\heito\\source\\repos\\ProjetoFab\\ProjetoFabAPI\\ProjetoFabAPI\\ProjetoFabAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\heito\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\heito\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\heito\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\heito\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\heito\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\heito\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}
