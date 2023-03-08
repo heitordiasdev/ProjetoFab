@@ -1,5 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using ProjetoFabAPI.Models.Data.Contexto;
+using ProjetoFabAPI.Repositories;
+using ProjetoFabAPI.Repositories.Interface;
+using ProjetoFabAPI.Repositories.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +14,8 @@ builder.Services.AddDbContext<DataContexto>(option =>
 {
     option.UseNpgsql(strConnection);
 });
+
+builder.Services.AddScoped<IFuncionarioRepository, FuncionarioRepository>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

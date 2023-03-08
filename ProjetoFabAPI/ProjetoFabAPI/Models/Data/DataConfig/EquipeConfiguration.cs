@@ -9,7 +9,11 @@ namespace ProjetoFabAPI.Models.Data.DataConfig
         public void Configure(EntityTypeBuilder<Equipe> builder)
         {
             builder.ToTable("Equipe");
-            builder.HasKey(k => k.NomeEquipe);
+
+            builder.HasKey(k => k.IdEquipe);
+            builder.Property(k => k.IdEquipe)
+                .IsRequired();
+
             builder.Property(k => k.NomeEquipe)
                 .HasColumnType("varchar(50)")
                 .IsRequired();
@@ -17,6 +21,8 @@ namespace ProjetoFabAPI.Models.Data.DataConfig
             builder.Property(x => x.Setor)
                 .HasColumnType("varchar(50)")
                 .IsRequired();
+
+            
         }
     }
 }

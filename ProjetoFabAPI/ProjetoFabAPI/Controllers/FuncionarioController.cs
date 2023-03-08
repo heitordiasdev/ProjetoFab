@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using ProjetoFabAPI.Models.EntitiesModels.Funcionario;
+using ProjetoFabAPI.Models.Domain.Entities;
+using ProjetoFabAPI.Repositories;
+using ProjetoFabAPI.Repositories.Interface;
 
 namespace ProjetoFabAPI.Controllers
 {
@@ -8,30 +10,22 @@ namespace ProjetoFabAPI.Controllers
     [ApiController]
     public class FuncionarioController : ControllerBase
     {
-        [HttpGet]
-        public IActionResult Get() 
+        private readonly IFuncionarioRepository _funcionarioRepository;
+
+        public FuncionarioController(IFuncionarioRepository funcionarioRepository)
         {
-            return Ok();
+            _funcionarioRepository = funcionarioRepository;
         }
 
-        [HttpPost]
-        public IActionResult Post(PostFuncionario funcionario) 
+        [HttpPost("Register")]
+        public async Task<IActionResult> Register(Funcionario funcionario) 
         {
-            return Ok();
+            if (funcionario == null)
+            {
+                return BadRequest($"{funcionario} não pode ser nulo!!");
+            }
+            await _funcionarioRepository.Insert(funcionario);
+            return Ok("Funcionario registrado com sucesso!!");
         }
-
-        [HttpPut] 
-        public IActionResult Put() 
-        {
-            return Ok();
-        }
-
-        [HttpDelete]
-        public IActionResult Delete() 
-        {
-            return Ok();
-        }
-
-
     }
 }

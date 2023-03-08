@@ -21,7 +21,6 @@ namespace ProjetoFabAPI.Models.Data.DataConfig
             builder.Property(x => x.Email)
                 .HasColumnType("varchar(50)");
 
-
         }
     }
 
