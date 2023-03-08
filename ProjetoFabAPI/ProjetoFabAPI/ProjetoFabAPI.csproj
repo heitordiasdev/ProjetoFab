@@ -7,6 +7,25 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Controllers\**" />
+    <Compile Remove="Domain\**" />
+    <Compile Remove="Repositories\**" />
+    <Compile Remove="WebAPI\**" />
+    <Content Remove="Controllers\**" />
+    <Content Remove="Domain\**" />
+    <Content Remove="Repositories\**" />
+    <Content Remove="WebAPI\**" />
+    <EmbeddedResource Remove="Controllers\**" />
+    <EmbeddedResource Remove="Domain\**" />
+    <EmbeddedResource Remove="Repositories\**" />
+    <EmbeddedResource Remove="WebAPI\**" />
+    <None Remove="Controllers\**" />
+    <None Remove="Domain\**" />
+    <None Remove="Repositories\**" />
+    <None Remove="WebAPI\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.3">
       <PrivateAssets>all</PrivateAssets>
@@ -18,13 +37,6 @@
     </PackageReference>
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.3" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="Domain\" />
-    <Folder Include="Repositories\" />
-    <Folder Include="WebAPI\" />
   </ItemGroup>
 
 </Project>
