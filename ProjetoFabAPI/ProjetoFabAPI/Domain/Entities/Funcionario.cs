@@ -17,6 +17,7 @@ namespace ProjetoFabAPI.Domain.Entities
         [Column(TypeName = "varchar(50)")]
         public string Referencia { get; set; }
 
+
         [ForeignKey("Equipe")]
         public string NomeEquipe { get; set; }
         public virtual Equipe Equipe { get; set; } 
