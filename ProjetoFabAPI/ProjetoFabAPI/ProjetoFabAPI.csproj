@@ -8,19 +8,15 @@
 
   <ItemGroup>
     <Compile Remove="Controllers\**" />
-    <Compile Remove="Domain\**" />
     <Compile Remove="Repositories\**" />
     <Compile Remove="WebAPI\**" />
     <Content Remove="Controllers\**" />
-    <Content Remove="Domain\**" />
     <Content Remove="Repositories\**" />
     <Content Remove="WebAPI\**" />
     <EmbeddedResource Remove="Controllers\**" />
-    <EmbeddedResource Remove="Domain\**" />
     <EmbeddedResource Remove="Repositories\**" />
     <EmbeddedResource Remove="WebAPI\**" />
     <None Remove="Controllers\**" />
-    <None Remove="Domain\**" />
     <None Remove="Repositories\**" />
     <None Remove="WebAPI\**" />
   </ItemGroup>
