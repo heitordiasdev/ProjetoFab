@@ -7,17 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Controllers\**" />
-    <Compile Remove="Repositories\**" />
     <Compile Remove="WebAPI\**" />
-    <Content Remove="Controllers\**" />
-    <Content Remove="Repositories\**" />
     <Content Remove="WebAPI\**" />
-    <EmbeddedResource Remove="Controllers\**" />
-    <EmbeddedResource Remove="Repositories\**" />
     <EmbeddedResource Remove="WebAPI\**" />
-    <None Remove="Controllers\**" />
-    <None Remove="Repositories\**" />
     <None Remove="WebAPI\**" />
   </ItemGroup>
 
@@ -33,6 +25,10 @@
     </PackageReference>
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.3" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Repositories\" />
   </ItemGroup>
 
 </Project>
