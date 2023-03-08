@@ -5,7 +5,7 @@
 namespace ProjetoFabAPI.Migrations
 {
     /// <inheritdoc />
-    public partial class CriacaoTabelas : Migration
+    public partial class criacaotabelas : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -29,7 +29,6 @@ namespace ProjetoFabAPI.Migrations
                     Nome = table.Column<string>(type: "varchar(50)", nullable: false),
                     Cargo = table.Column<string>(type: "varchar(50)", nullable: false),
                     Email = table.Column<string>(type: "varchar(50)", nullable: false),
-                    Referencia = table.Column<string>(type: "varchar(50)", nullable: false),
                     NomeEquipe = table.Column<string>(type: "varchar(50)", nullable: false)
                 },
                 constraints: table =>

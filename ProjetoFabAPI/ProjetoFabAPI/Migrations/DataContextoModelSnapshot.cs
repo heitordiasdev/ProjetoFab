@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
-using ProjetoFabAPI.Data.Contexto;
+using ProjetoFabAPI.Models.Data.Contexto;
 
 #nullable disable
 
@@ -21,7 +21,7 @@ namespace ProjetoFabAPI.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("ProjetoFabAPI.Domain.Entities.Equipe", b =>
+            modelBuilder.Entity("ProjetoFabAPI.Models.Domain.Entities.Equipe", b =>
                 {
                     b.Property<string>("NomeEquipe")
                         .HasColumnType("varchar(50)");
@@ -35,7 +35,7 @@ namespace ProjetoFabAPI.Migrations
                     b.ToTable("Equipe", (string)null);
                 });
 
-            modelBuilder.Entity("ProjetoFabAPI.Domain.Entities.Funcionario", b =>
+            modelBuilder.Entity("ProjetoFabAPI.Models.Domain.Entities.Funcionario", b =>
                 {
                     b.Property<string>("Nome")
                         .HasColumnType("varchar(50)");
@@ -52,10 +52,6 @@ namespace ProjetoFabAPI.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(50)");
 
-                    b.Property<string>("Referencia")
-                        .IsRequired()
-                        .HasColumnType("varchar(50)");
-
                     b.HasKey("Nome");
 
                     b.HasIndex("NomeEquipe");
@@ -63,9 +59,9 @@ namespace ProjetoFabAPI.Migrations
                     b.ToTable("Funcionario", (string)null);
                 });
 
-            modelBuilder.Entity("ProjetoFabAPI.Domain.Entities.Funcionario", b =>
+            modelBuilder.Entity("ProjetoFabAPI.Models.Domain.Entities.Funcionario", b =>
                 {
-                    b.HasOne("ProjetoFabAPI.Domain.Entities.Equipe", "Equipe")
+                    b.HasOne("ProjetoFabAPI.Models.Domain.Entities.Equipe", "Equipe")
                         .WithMany()
                         .HasForeignKey("NomeEquipe")
                         .OnDelete(DeleteBehavior.Cascade)

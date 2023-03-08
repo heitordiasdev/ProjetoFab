@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using ProjetoFabAPI.Data.Contexto;
+using ProjetoFabAPI.Models.Data.Contexto;
 
 var builder = WebApplication.CreateBuilder(args);
 

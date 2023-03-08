@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using ProjetoFabAPI.Domain.Entities;
+using ProjetoFabAPI.Models.Domain.Entities;
 
-namespace ProjetoFabAPI.Data.DataConfig
+namespace ProjetoFabAPI.Models.Data.DataConfig
 {
     public class FuncionarioConfiguration : IEntityTypeConfiguration<Funcionario>
     {
@@ -21,8 +21,8 @@ namespace ProjetoFabAPI.Data.DataConfig
             builder.Property(x => x.Email)
                 .HasColumnType("varchar(50)");
 
-                
+
         }
     }
-    
-    }
+
+}

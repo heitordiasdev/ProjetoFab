@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ProjetoFabAPI.Domain.Entities
+namespace ProjetoFabAPI.Models.Domain.Entities
 {
     public class Equipe
     {

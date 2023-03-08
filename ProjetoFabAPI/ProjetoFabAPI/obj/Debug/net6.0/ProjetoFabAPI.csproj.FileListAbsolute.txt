@@ -1,3 +1,10 @@
+C:\Users\heito\source\repos\ProjetoFab\ProjetoFabAPI\ProjetoFabAPI\obj\Debug\net6.0\ProjetoFabAPI.csproj.AssemblyReference.cache
+C:\Users\heito\source\repos\ProjetoFab\ProjetoFabAPI\ProjetoFabAPI\obj\Debug\net6.0\ProjetoFabAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\heito\source\repos\ProjetoFab\ProjetoFabAPI\ProjetoFabAPI\obj\Debug\net6.0\ProjetoFabAPI.AssemblyInfoInputs.cache
+C:\Users\heito\source\repos\ProjetoFab\ProjetoFabAPI\ProjetoFabAPI\obj\Debug\net6.0\ProjetoFabAPI.AssemblyInfo.cs
+C:\Users\heito\source\repos\ProjetoFab\ProjetoFabAPI\ProjetoFabAPI\obj\Debug\net6.0\ProjetoFabAPI.csproj.CoreCompileInputs.cache
+C:\Users\heito\source\repos\ProjetoFab\ProjetoFabAPI\ProjetoFabAPI\obj\Debug\net6.0\ProjetoFabAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\heito\source\repos\ProjetoFab\ProjetoFabAPI\ProjetoFabAPI\obj\Debug\net6.0\ProjetoFabAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\heito\source\repos\ProjetoFab\ProjetoFabAPI\ProjetoFabAPI\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\heito\source\repos\ProjetoFab\ProjetoFabAPI\ProjetoFabAPI\bin\Debug\net6.0\appsettings.json
 C:\Users\heito\source\repos\ProjetoFab\ProjetoFabAPI\ProjetoFabAPI\bin\Debug\net6.0\ProjetoFabAPI.exe
@@ -31,13 +38,6 @@ C:\Users\heito\source\repos\ProjetoFab\ProjetoFabAPI\ProjetoFabAPI\bin\Debug\net
 C:\Users\heito\source\repos\ProjetoFab\ProjetoFabAPI\ProjetoFabAPI\bin\Debug\net6.0\System.Text.Encodings.Web.dll
 C:\Users\heito\source\repos\ProjetoFab\ProjetoFabAPI\ProjetoFabAPI\bin\Debug\net6.0\System.Text.Json.dll
 C:\Users\heito\source\repos\ProjetoFab\ProjetoFabAPI\ProjetoFabAPI\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
-C:\Users\heito\source\repos\ProjetoFab\ProjetoFabAPI\ProjetoFabAPI\obj\Debug\net6.0\ProjetoFabAPI.csproj.AssemblyReference.cache
-C:\Users\heito\source\repos\ProjetoFab\ProjetoFabAPI\ProjetoFabAPI\obj\Debug\net6.0\ProjetoFabAPI.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\heito\source\repos\ProjetoFab\ProjetoFabAPI\ProjetoFabAPI\obj\Debug\net6.0\ProjetoFabAPI.AssemblyInfoInputs.cache
-C:\Users\heito\source\repos\ProjetoFab\ProjetoFabAPI\ProjetoFabAPI\obj\Debug\net6.0\ProjetoFabAPI.AssemblyInfo.cs
-C:\Users\heito\source\repos\ProjetoFab\ProjetoFabAPI\ProjetoFabAPI\obj\Debug\net6.0\ProjetoFabAPI.csproj.CoreCompileInputs.cache
-C:\Users\heito\source\repos\ProjetoFab\ProjetoFabAPI\ProjetoFabAPI\obj\Debug\net6.0\ProjetoFabAPI.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\heito\source\repos\ProjetoFab\ProjetoFabAPI\ProjetoFabAPI\obj\Debug\net6.0\ProjetoFabAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\heito\source\repos\ProjetoFab\ProjetoFabAPI\ProjetoFabAPI\obj\Debug\net6.0\staticwebassets\msbuild.ProjetoFabAPI.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Users\heito\source\repos\ProjetoFab\ProjetoFabAPI\ProjetoFabAPI\obj\Debug\net6.0\staticwebassets\msbuild.build.ProjetoFabAPI.props
 C:\Users\heito\source\repos\ProjetoFab\ProjetoFabAPI\ProjetoFabAPI\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.ProjetoFabAPI.props

@@ -1,12 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ProjetoFabAPI.Data.DataConfig;
-using ProjetoFabAPI.Domain.Entities;
+using ProjetoFabAPI.Models.Data.DataConfig;
+using ProjetoFabAPI.Models.Domain.Entities;
 
-namespace ProjetoFabAPI.Data.Contexto
+namespace ProjetoFabAPI.Models.Data.Contexto
 {
-    public class DataContexto:DbContext
+    public class DataContexto : DbContext
     {
-        public DataContexto(DbContextOptions<DataContexto> options):base(options){}
+        public DataContexto(DbContextOptions<DataContexto> options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

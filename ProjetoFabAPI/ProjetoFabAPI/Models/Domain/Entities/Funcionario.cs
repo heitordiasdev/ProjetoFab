@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ProjetoFabAPI.Domain.Entities
+namespace ProjetoFabAPI.Models.Domain.Entities
 {
     public class Funcionario
     {
@@ -14,12 +14,8 @@ namespace ProjetoFabAPI.Domain.Entities
         [Column(TypeName = "varchar(100)")]
         public string Email { get; set; }
 
-        [Column(TypeName = "varchar(50)")]
-        public string Referencia { get; set; }
-
-
         [ForeignKey("Equipe")]
         public string NomeEquipe { get; set; }
-        public virtual Equipe Equipe { get; set; } 
+        public virtual Equipe Equipe { get; set; }
     }
 }
