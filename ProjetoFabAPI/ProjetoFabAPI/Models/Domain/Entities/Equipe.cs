@@ -7,15 +7,15 @@ namespace ProjetoFabAPI.Models.Domain.Entities
     public class Equipe
     {
 
-        public int IdEquipe { get; set; }
+        public int Id { get; set; }
 
-        [Column(TypeName = "varchar(50)")]
         public string NomeEquipe { get; set; }
 
-        [Column(TypeName = "varchar(50)")]
         public string Setor { get; set; }
 
+        public ICollection<Funcionario> Funcionarios { get; set; }
         
+
        
     }
 }

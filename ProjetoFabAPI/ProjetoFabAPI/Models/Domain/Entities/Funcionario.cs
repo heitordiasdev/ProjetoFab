@@ -5,6 +5,7 @@ namespace ProjetoFabAPI.Models.Domain.Entities
 {
     public class Funcionario
     {
+        public int IdFunc { get; set; }
         [Column(TypeName = "varchar(50)")]
         public string Nome { get; set; }
 

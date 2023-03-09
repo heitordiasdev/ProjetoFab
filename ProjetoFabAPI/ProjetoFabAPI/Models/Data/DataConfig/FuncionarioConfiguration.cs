@@ -9,7 +9,7 @@ namespace ProjetoFabAPI.Models.Data.DataConfig
         public void Configure(EntityTypeBuilder<Funcionario> builder)
         {
             builder.ToTable("Funcionario");
-            builder.HasKey(k => k.Nome);
+            builder.HasKey(k => k.IdFunc);
             builder.Property(k => k.Nome)
                 .HasColumnType("varchar(50)")
                 .IsRequired();
@@ -20,6 +20,10 @@ namespace ProjetoFabAPI.Models.Data.DataConfig
 
             builder.Property(x => x.Email)
                 .HasColumnType("varchar(50)");
+
+            builder.HasOne(c => c.Equipe).WithMany(c => c.Funcionarios)
+                .HasForeignKey(c => c.IdEquipe)
+                .IsRequired();
 
         }
     }

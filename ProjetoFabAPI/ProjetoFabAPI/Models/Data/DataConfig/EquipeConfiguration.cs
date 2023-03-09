@@ -10,8 +10,8 @@ namespace ProjetoFabAPI.Models.Data.DataConfig
         {
             builder.ToTable("Equipe");
 
-            builder.HasKey(k => k.IdEquipe);
-            builder.Property(k => k.IdEquipe)
+            builder.HasKey(k => k.Id);
+            builder.Property(k => k.Id)
                 .IsRequired();
 
             builder.Property(k => k.NomeEquipe)
@@ -22,6 +22,7 @@ namespace ProjetoFabAPI.Models.Data.DataConfig
                 .HasColumnType("varchar(50)")
                 .IsRequired();
 
+            builder.HasMany(c => c.Funcionarios).WithOne(c => c.Equipe);
             
         }
     }

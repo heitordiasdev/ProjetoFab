@@ -11,8 +11,8 @@ using ProjetoFabAPI.Models.Data.Contexto;
 namespace ProjetoFabAPI.Migrations
 {
     [DbContext(typeof(DataContexto))]
-    [Migration("20230309001624_criacaotabelas")]
-    partial class criacaotabelas
+    [Migration("20230309224716_CriacaoDeTabelas")]
+    partial class CriacaoDeTabelas
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -26,11 +26,11 @@ namespace ProjetoFabAPI.Migrations
 
             modelBuilder.Entity("ProjetoFabAPI.Models.Domain.Entities.Equipe", b =>
                 {
-                    b.Property<int>("IdEquipe")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("IdEquipe"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<string>("NomeEquipe")
                         .IsRequired()
@@ -40,15 +40,18 @@ namespace ProjetoFabAPI.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(50)");
 
-                    b.HasKey("IdEquipe");
+                    b.HasKey("Id");
 
                     b.ToTable("Equipe", (string)null);
                 });
 
             modelBuilder.Entity("ProjetoFabAPI.Models.Domain.Entities.Funcionario", b =>
                 {
-                    b.Property<string>("Nome")
-                        .HasColumnType("varchar(50)");
+                    b.Property<int>("IdFunc")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("IdFunc"));
 
                     b.Property<string>("Cargo")
                         .IsRequired()
@@ -58,15 +61,16 @@ namespace ProjetoFabAPI.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(50)");
 
-                    b.Property<int>("EquipeIdEquipe")
-                        .HasColumnType("integer");
-
                     b.Property<int>("IdEquipe")
                         .HasColumnType("integer");
 
-                    b.HasKey("Nome");
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasColumnType("varchar(50)");
 
-                    b.HasIndex("EquipeIdEquipe");
+                    b.HasKey("IdFunc");
+
+                    b.HasIndex("IdEquipe");
 
                     b.ToTable("Funcionario", (string)null);
                 });
@@ -74,12 +78,17 @@ namespace ProjetoFabAPI.Migrations
             modelBuilder.Entity("ProjetoFabAPI.Models.Domain.Entities.Funcionario", b =>
                 {
                     b.HasOne("ProjetoFabAPI.Models.Domain.Entities.Equipe", "Equipe")
-                        .WithMany()
-                        .HasForeignKey("EquipeIdEquipe")
+                        .WithMany("Funcionarios")
+                        .HasForeignKey("IdEquipe")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Equipe");
+                });
+
+            modelBuilder.Entity("ProjetoFabAPI.Models.Domain.Entities.Equipe", b =>
+                {
+                    b.Navigation("Funcionarios");
                 });
 #pragma warning restore 612, 618
         }
