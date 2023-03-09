@@ -55,25 +55,28 @@ namespace ProjetoFabAPI.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(50)");
 
+                    b.Property<int>("EquipeIdEquipe")
+                        .HasColumnType("integer");
+
                     b.Property<int>("IdEquipe")
                         .HasColumnType("integer");
 
                     b.HasKey("Nome");
 
-                    b.HasIndex("IdEquipe");
+                    b.HasIndex("EquipeIdEquipe");
 
                     b.ToTable("Funcionario", (string)null);
                 });
 
             modelBuilder.Entity("ProjetoFabAPI.Models.Domain.Entities.Funcionario", b =>
                 {
-                    b.HasOne("ProjetoFabAPI.Models.Domain.Entities.Equipe", "equipe")
+                    b.HasOne("ProjetoFabAPI.Models.Domain.Entities.Equipe", "Equipe")
                         .WithMany()
-                        .HasForeignKey("IdEquipe")
+                        .HasForeignKey("EquipeIdEquipe")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("equipe");
+                    b.Navigation("Equipe");
                 });
 #pragma warning restore 612, 618
         }

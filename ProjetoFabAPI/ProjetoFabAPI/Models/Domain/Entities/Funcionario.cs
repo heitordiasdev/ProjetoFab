@@ -14,7 +14,7 @@ namespace ProjetoFabAPI.Models.Domain.Entities
         [Column(TypeName = "varchar(100)")]
         public string Email { get; set; }
 
-        [ForeignKey("IdEquipe")]
-        public virtual Equipe equipe { get; set; }
+        public int IdEquipe { get; set; }
+        public Equipe Equipe { get; set; }
     }
 }

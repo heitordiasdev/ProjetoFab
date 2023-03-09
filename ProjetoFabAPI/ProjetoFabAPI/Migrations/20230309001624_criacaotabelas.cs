@@ -32,23 +32,24 @@ namespace ProjetoFabAPI.Migrations
                     Nome = table.Column<string>(type: "varchar(50)", nullable: false),
                     Cargo = table.Column<string>(type: "varchar(50)", nullable: false),
                     Email = table.Column<string>(type: "varchar(50)", nullable: false),
-                    IdEquipe = table.Column<int>(type: "integer", nullable: false)
+                    IdEquipe = table.Column<int>(type: "integer", nullable: false),
+                    EquipeIdEquipe = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Funcionario", x => x.Nome);
                     table.ForeignKey(
-                        name: "FK_Funcionario_Equipe_IdEquipe",
-                        column: x => x.IdEquipe,
+                        name: "FK_Funcionario_Equipe_EquipeIdEquipe",
+                        column: x => x.EquipeIdEquipe,
                         principalTable: "Equipe",
                         principalColumn: "IdEquipe",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Funcionario_IdEquipe",
+                name: "IX_Funcionario_EquipeIdEquipe",
                 table: "Funcionario",
-                column: "IdEquipe");
+                column: "EquipeIdEquipe");
         }
 
         /// <inheritdoc />
