@@ -20,9 +20,9 @@ namespace ProjetoFabAPI.Controllers
         [HttpPost("Register")]
         public async Task<IActionResult> Register(Funcionario funcionario) 
         {
-            if (funcionario == null)
+            if (funcionario.Cargo=="Gerente" && funcionario.Email=="")
             {
-                return BadRequest($"{funcionario} não pode ser nulo!!");
+                return BadRequest($"{funcionario.Email} não pode ser nulo quando seu cargo é gerente!!");
             }
             await _funcionarioRepository.Insert(funcionario);
             return Ok("Funcionario registrado com sucesso!!");
