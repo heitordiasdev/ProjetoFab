@@ -30,5 +30,11 @@ namespace ProjetoFabAPI.Controllers
 
         }
 
+        [HttpGet("AllEquipes")]
+        public async Task<IActionResult> TodosAsEquipes()
+        {
+            var resultado = await _equipeRepository.GetAll();
+            return Ok(resultado.ToList());
+        }
     }
 }
