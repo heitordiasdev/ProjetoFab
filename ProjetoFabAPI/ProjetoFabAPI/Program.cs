@@ -16,6 +16,7 @@ builder.Services.AddDbContext<DataContexto>(option =>
 });
 
 builder.Services.AddScoped<IFuncionarioRepository, FuncionarioRepository>();
+builder.Services.AddScoped<IEquipeRepository, EquipeRepository>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
