@@ -27,5 +27,12 @@ namespace ProjetoFabAPI.Controllers
             await _funcionarioRepository.Insert(funcionario);
             return Ok("Funcionario registrado com sucesso!!");
         }
+
+        [HttpGet("AllFuncionarios")]
+        public async Task<IActionResult> TodosOsFuncionarios() 
+        {
+            var resultado = await _funcionarioRepository.GetAll();
+            return Ok(resultado.ToList());
+        }
     }
 }
