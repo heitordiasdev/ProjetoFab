@@ -32,7 +32,9 @@ namespace ProjetoFabAPI.Controllers
             }
 
             var equipe = await _dataContexto.FindEquipeByIdAsync(_dataContexto, funcionario.IdEquipe);
-            
+
+            funcionario.Equipe = equipe;
+
             await _dataContexto.funcionarios.AddAsync(funcionario);
             await _dataContexto.SaveChangesAsync();
             return Ok("Funcionario registrado com sucesso!!");
