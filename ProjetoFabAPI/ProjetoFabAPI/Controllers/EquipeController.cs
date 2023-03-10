@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using ProjetoFabAPI.Models.Data.Contexto;
 using ProjetoFabAPI.Models.Domain.Entities;
-using ProjetoFabAPI.Repositories.Interface;
-using ProjetoFabAPI.Repositories.Repository;
 
 namespace ProjetoFabAPI.Controllers
 {
@@ -10,11 +10,11 @@ namespace ProjetoFabAPI.Controllers
     [ApiController]
     public class EquipeController : ControllerBase
     {
-        private readonly IEquipeRepository _equipeRepository;
+        private readonly DataContexto _dataContexto;
 
-        public EquipeController(IEquipeRepository equipeRepository)
+        public EquipeController(DataContexto dataContexto)
         {
-            _equipeRepository = equipeRepository;
+            _dataContexto = dataContexto;
         }
 
         [HttpPost("RegisterEquipe")]
@@ -25,7 +25,8 @@ namespace ProjetoFabAPI.Controllers
                 return BadRequest($"{equipe} não pode ser nulo!!");
             }
 
-            await _equipeRepository.Insert(equipe);
+            await _dataContexto.equipes.AddAsync(equipe);
+            await _dataContexto.SaveChangesAsync();
             return Ok("Equipe registrada com sucesso!!");
 
         }
@@ -33,8 +34,8 @@ namespace ProjetoFabAPI.Controllers
         [HttpGet("AllEquipes")]
         public async Task<IActionResult> TodosAsEquipes()
         {
-            var resultado = await _equipeRepository.GetAll();
-            return Ok(resultado.ToList());
+            var equipesModel = await _dataContexto.equipes.ToListAsync();
+            return Ok(equipesModel);
         }
     }
 }

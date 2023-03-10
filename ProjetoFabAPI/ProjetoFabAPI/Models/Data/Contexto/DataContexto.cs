@@ -6,6 +6,7 @@ namespace ProjetoFabAPI.Models.Data.Contexto
 {
     public class DataContexto : DbContext
     {
+        
         public DbSet<Equipe> equipes {  get; set; }
         public DbSet<Funcionario> funcionarios { get; set; }
         public DataContexto(DbContextOptions<DataContexto> options) : base(options) { }
