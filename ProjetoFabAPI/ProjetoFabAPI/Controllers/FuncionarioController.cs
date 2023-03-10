@@ -31,6 +31,8 @@ namespace ProjetoFabAPI.Controllers
                 return BadRequest($"{funcionario.Email} não pode ser nulo quando seu cargo é gerente!!");
             }
 
+            var equipe = await _dataContexto.FindEquipeByIdAsync(_dataContexto, funcionario.IdEquipe);
+            
             await _dataContexto.funcionarios.AddAsync(funcionario);
             await _dataContexto.SaveChangesAsync();
             return Ok("Funcionario registrado com sucesso!!");
@@ -42,6 +44,7 @@ namespace ProjetoFabAPI.Controllers
             var FuncionarioModel = await _dataContexto.funcionarios.ToListAsync();
             return Ok(FuncionarioModel);
         }
+
 
     
     }
