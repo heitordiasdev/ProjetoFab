@@ -17,6 +17,10 @@ namespace ProjetoFabAPI.Models.Data.Contexto
             builder.Entity<Funcionario>(new FuncionarioConfiguration().Configure);
             base.OnModelCreating(builder);
         }
+        public async Task<Equipe> FindEquipeByIdAsync(DataContexto dataContexto, int id)
+        {
+            return await dataContexto.equipes.FirstOrDefaultAsync(e => e.Id == id);
+        }
 
     }
 }

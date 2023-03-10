@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\heito\\source\\repos\\ProjetoFab\\ProjetoFabAPI\\ProjetoFabAPI\\ProjetoFabAPI.csproj": {}
+    "C:\\Users\\heito\\Source\\Repos\\ProjetoFab\\ProjetoFabAPI\\ProjetoFabAPI\\ProjetoFabAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\heito\\source\\repos\\ProjetoFab\\ProjetoFabAPI\\ProjetoFabAPI\\ProjetoFabAPI.csproj": {
+    "C:\\Users\\heito\\Source\\Repos\\ProjetoFab\\ProjetoFabAPI\\ProjetoFabAPI\\ProjetoFabAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\heito\\source\\repos\\ProjetoFab\\ProjetoFabAPI\\ProjetoFabAPI\\ProjetoFabAPI.csproj",
+        "projectUniqueName": "C:\\Users\\heito\\Source\\Repos\\ProjetoFab\\ProjetoFabAPI\\ProjetoFabAPI\\ProjetoFabAPI.csproj",
         "projectName": "ProjetoFabAPI",
-        "projectPath": "C:\\Users\\heito\\source\\repos\\ProjetoFab\\ProjetoFabAPI\\ProjetoFabAPI\\ProjetoFabAPI.csproj",
+        "projectPath": "C:\\Users\\heito\\Source\\Repos\\ProjetoFab\\ProjetoFabAPI\\ProjetoFabAPI\\ProjetoFabAPI.csproj",
         "packagesPath": "C:\\Users\\heito\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\heito\\source\\repos\\ProjetoFab\\ProjetoFabAPI\\ProjetoFabAPI\\obj\\",
+        "outputPath": "C:\\Users\\heito\\Source\\Repos\\ProjetoFab\\ProjetoFabAPI\\ProjetoFabAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\heito\\AppData\\Roaming\\NuGet\\NuGet.Config",
