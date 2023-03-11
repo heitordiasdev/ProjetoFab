@@ -12,6 +12,7 @@ namespace ProjetoFabAPI.Models.Data.DataConfig
 
             builder.HasKey(k => k.Id);
             builder.Property(k => k.Id)
+                .ValueGeneratedOnAdd()
                 .IsRequired();
 
             builder.Property(k => k.NomeEquipe)

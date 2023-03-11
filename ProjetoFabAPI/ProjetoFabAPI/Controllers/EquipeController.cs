@@ -18,12 +18,16 @@ namespace ProjetoFabAPI.Controllers
         }
 
         [HttpPost("RegisterEquipe")]
-        public async Task<IActionResult> RegisterEquipe(Equipe equipe)
+        public async Task<IActionResult> RegisterEquipe(EquipeSerializer equipeSerializer)
         {
-            if (equipe == null) 
+            if (equipeSerializer == null) 
             {
-                return BadRequest($"{equipe} não pode ser nulo!!");
+                return BadRequest($"{equipeSerializer} não pode ser nulo!!");
             }
+
+            Equipe equipe = new Equipe();
+            equipe.Setor = equipeSerializer.Setor;
+            equipe.NomeEquipe = equipeSerializer.NomeEquipe;
 
             await _dataContexto.equipes.AddAsync(equipe);
             await _dataContexto.SaveChangesAsync();

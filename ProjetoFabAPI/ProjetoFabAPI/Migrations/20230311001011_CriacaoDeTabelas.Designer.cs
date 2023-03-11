@@ -11,7 +11,7 @@ using ProjetoFabAPI.Models.Data.Contexto;
 namespace ProjetoFabAPI.Migrations
 {
     [DbContext(typeof(DataContexto))]
-    [Migration("20230309224716_CriacaoDeTabelas")]
+    [Migration("20230311001011_CriacaoDeTabelas")]
     partial class CriacaoDeTabelas
     {
         /// <inheritdoc />

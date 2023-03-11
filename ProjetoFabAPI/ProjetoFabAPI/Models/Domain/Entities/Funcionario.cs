@@ -15,4 +15,14 @@ namespace ProjetoFabAPI.Models.Domain.Entities
         public int IdEquipe { get; set; }
         public Equipe Equipe { get; set; }
     }
+
+    public class FuncionarioSerializer
+    {
+        public string Nome { get; set; }
+        public string Cargo { get; set; }
+        public string Email { get; set; }
+        
+        public int IdEquipe { get; set;}
+
+    }
 }

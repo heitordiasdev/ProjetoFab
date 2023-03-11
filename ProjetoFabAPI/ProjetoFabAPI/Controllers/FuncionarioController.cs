@@ -19,21 +19,26 @@ namespace ProjetoFabAPI.Controllers
         }
 
         [HttpPost("Register")]
-        public async Task<IActionResult> Register(Funcionario funcionario) 
+        public async Task<IActionResult> Register(FuncionarioSerializer funcionarioSerializer) 
         {
-            if (funcionario == null)
+            if (funcionarioSerializer == null)
             {
                 return BadRequest();
             }
 
-            if (funcionario.Cargo=="Gerente" && funcionario.Email=="")
+            if (funcionarioSerializer.Cargo=="Gerente" && funcionarioSerializer.Email=="")
             {
-                return BadRequest($"{funcionario.Email} não pode ser nulo quando seu cargo é gerente!!");
+                return BadRequest($"{funcionarioSerializer.Email} não pode ser nulo quando seu cargo é gerente!!");
             }
 
-            var equipe = await _dataContexto.FindEquipeByIdAsync(_dataContexto, funcionario.IdEquipe);
+            Funcionario funcionario = new Funcionario();
 
-            funcionario.Equipe = equipe;
+            funcionario.Equipe = await _dataContexto.FindEquipeByIdAsync(_dataContexto, funcionarioSerializer.IdEquipe);
+
+            funcionario.Nome = funcionarioSerializer.Nome;
+            funcionario.Cargo = funcionarioSerializer.Cargo;
+            funcionario.Email = funcionarioSerializer.Email;
+            
 
             await _dataContexto.funcionarios.AddAsync(funcionario);
             await _dataContexto.SaveChangesAsync();

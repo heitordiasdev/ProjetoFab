@@ -14,8 +14,16 @@ namespace ProjetoFabAPI.Models.Domain.Entities
         public string Setor { get; set; }
 
         public ICollection<Funcionario> Funcionarios { get; set; }
-        
 
-       
+
+
     }
+
+    public class EquipeSerializer
+        {
+        public string NomeEquipe { get; set; }
+
+        public string Setor { get; set; }
+
+        }
 }
