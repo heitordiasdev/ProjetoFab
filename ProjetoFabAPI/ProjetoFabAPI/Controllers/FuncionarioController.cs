@@ -25,12 +25,6 @@ namespace ProjetoFabAPI.Controllers
             {
                 return BadRequest();
             }
-
-            if (funcionarioSerializer.Cargo=="Gerente" && funcionarioSerializer.Email=="")
-            {
-                return BadRequest($"{funcionarioSerializer.Email} não pode ser nulo quando seu cargo é gerente!!");
-            }
-
             Funcionario funcionario = new Funcionario();
 
             funcionario.Equipe = await _dataContexto.FindEquipeByIdAsync(_dataContexto, funcionarioSerializer.IdEquipe);
@@ -38,7 +32,13 @@ namespace ProjetoFabAPI.Controllers
             funcionario.Nome = funcionarioSerializer.Nome;
             funcionario.Cargo = funcionarioSerializer.Cargo;
             funcionario.Email = funcionarioSerializer.Email;
-            
+
+            if (funcionarioSerializer.Cargo=="Gerente" && funcionarioSerializer.Email=="")
+            {
+                funcionario.Email = null;
+                return BadRequest($"{funcionarioSerializer.Email} não pode ser nulo quando seu cargo é gerente!!");
+            }
+  
 
             await _dataContexto.funcionarios.AddAsync(funcionario);
             await _dataContexto.SaveChangesAsync();
